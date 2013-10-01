@@ -9,11 +9,11 @@ return array(
 
         'from_email' => null,
 
-        'getter.email' => function($user) {
+        'getter_email' => function($user) {
             return $user->email;
         },
 
-        'getter.name' => function($user) {
+        'getter_name' => function($user) {
             return $user->first_name . ' ' . $user->last_name;
         },
     ),
@@ -21,7 +21,7 @@ return array(
     'sms' => array(
         'enabled' => false,
 
-        'getter.phone' => function($user) {
+        'getter_phone' => function($user) {
             return $user->phone;
         },
 

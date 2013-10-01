@@ -16,7 +16,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider {
      */
     public function boot()
     {
-        $this->package('skovachev/notifier', 'notifier', __DIR__.'/../');
+        $this->package('skovachev/notifier');
     }
 
     /**

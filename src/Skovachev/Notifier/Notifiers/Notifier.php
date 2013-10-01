@@ -40,8 +40,8 @@ abstract class Notifier
 
     protected function obtainUserInfo($info)
     {
-        $callback = $this->getOption('getter.' . $info);
-        return call_user_func($callback, $this->user);
+        $callback = $this->getOption('getter_' . $info);
+        return $callback->__invoke($this->user);
     }
 
     private function getKeyPrefix()
