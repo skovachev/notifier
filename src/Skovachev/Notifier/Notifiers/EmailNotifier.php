@@ -9,7 +9,7 @@ class EmailNotifier extends Notifier
         return 'email';
     }
 
-    public function prepareDestination($destination, $user)
+    public function prepareDestination($destination)
     {
         $destination['from_email'] = $this->getOption('from_email');
         $destination['email'] = $this->obtainUserInfo('email');
