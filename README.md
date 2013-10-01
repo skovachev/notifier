@@ -5,7 +5,7 @@ Laravel 4 library for sending SMS and email notifications
 TODOs
 -----
 1. Add tests
-2. Update Readme with guide on how to use classes in package
+2. Update Readme file with guide on how to use classes in package
 
 DON'T BE A DICK PUBLIC LICENSE
 ------------------------------
