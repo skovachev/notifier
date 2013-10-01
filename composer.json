@@ -1,0 +1,25 @@
+{
+    "name": "skovachev/notifier",
+    "description": "Laravel 4 library for sending SMS and email notifications",
+    "keywords": ["laravel", "notifications", "email", "sms"],
+    "homepage": "http://github.com/skovachev/notifier",
+    "license": "DBAD",
+    "authors": [
+        {
+            "name": "Stefan Kovachev",
+            "email": "contact@eskapism.com",
+            "homepage": "http://www.eskapism.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x",
+        "twilio/sdk": "3.10.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Skovachev\\Notifier": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
