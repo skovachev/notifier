@@ -2,7 +2,7 @@
 
 use View;
 
-class Notification
+class Notification implements \ArrayAccess
 {
     protected $view;
     protected $user;
@@ -57,4 +57,26 @@ class Notification
     {
         return $this->subject;
     }
+
+    // array access of view data
+    public function offsetExists ( mixed $offset )
+    {
+        return isset($this->view_data[$offset]);
+    }
+
+    public function offsetGet ( mixed $offset )
+    {
+        return $this->view_data[$offset];
+    }
+
+    public function offsetSet ( mixed $offset , mixed $value )
+    {
+        $this->view_data[$offset] = $value;
+    }
+
+    public function offsetUnset ( mixed $offset )
+    {
+        unset($this->view_data[$offset]);
+    }
+
 }
