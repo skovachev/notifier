@@ -8,12 +8,16 @@ class SMSNotifier extends Notifier
 {
     private $client;
 
-    public function __construct()
+    public function __construct($twilioClient = null)
     {
-        $sid = $this->getOption('twilio.sid');
-        $token = $this->getOption('twilio.token');
+        if (is_null($twilioClient))
+        {
+            $sid = $this->getOption('twilio.sid');
+            $token = $this->getOption('twilio.token');
+            $twilioClient = new Services_Twilio($sid, $token);
+        }
 
-        $this->client = new Services_Twilio($sid, $token);
+        $this->client = $twilioClient;
     }
 
     public function getNotifierKey()
