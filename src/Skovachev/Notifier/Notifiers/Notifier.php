@@ -1,6 +1,6 @@
 <?php namespace Skovachev\Notifier\Notifiers;
 
-use Config;
+use Illuminate\Support\Facades\Config;
 
 abstract class Notifier
 {
@@ -21,7 +21,6 @@ abstract class Notifier
 
             $destination = array('subject' => $subject);
             $destination = $this->prepareDestination($destination);
-
             $this->sendNotification($destination, $view, $data);
         }
     }

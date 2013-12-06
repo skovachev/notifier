@@ -1,6 +1,6 @@
 <?php namespace Skovachev\Notifier\Notifiers;
 
-use Mail;
+use Illuminate\Support\Facades\Mail;
 
 class EmailNotifier extends Notifier
 {

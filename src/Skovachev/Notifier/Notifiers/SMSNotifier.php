@@ -1,8 +1,8 @@
 <?php namespace Skovachev\Notifier\Notifiers;
 
-use View;
+use Illuminate\Support\Facades\View;
 use Services_Twilio;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 class SMSNotifier extends Notifier
 {
