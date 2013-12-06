@@ -1,6 +1,6 @@
 # Notifier ![Build status](https://api.travis-ci.org/skovachev/notifier.png)
 
-Some projects require user notifications to be sent out. In many cases there are multiple ways to notify an user about an event. This library makes it easier to send notifications using different notification channels.
+Some projects require user notifications to be sent out. In many cases there are multiple ways to notify an user about an event. This package makes it easier to send notifications using different notification channels.
 
 ## Installation
 

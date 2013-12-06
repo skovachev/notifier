@@ -1,6 +1,6 @@
 {
     "name": "skovachev/notifier",
-    "description": "Laravel 4 library for sending SMS and email notifications",
+    "description": "Laravel 4 package for sending SMS and email notifications",
     "keywords": ["laravel", "notifications", "email", "sms"],
     "homepage": "http://github.com/skovachev/notifier",
     "license": "MIT",
@@ -17,7 +17,8 @@
         "twilio/sdk": "3.10.*"
     },
     "require-dev": {
-        "mockery/mockery": "dev-master@dev"
+        "mockery/mockery": "dev-master@dev",
+        "illuminate/support": "4.0.x"
     },
     "autoload": {
         "psr-0": {
