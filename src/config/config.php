@@ -9,6 +9,8 @@ return array(
 
         'from_email' => null,
 
+        'cc_email' => null,
+
         'getter_email' => function($user) {
             return $user->email;
         },
