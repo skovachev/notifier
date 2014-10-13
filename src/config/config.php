@@ -11,6 +11,8 @@ return array(
 
         'cc_email' => null,
 
+        'bcc_email' => null,
+
         'getter_email' => function($user) {
             return $user->email;
         },

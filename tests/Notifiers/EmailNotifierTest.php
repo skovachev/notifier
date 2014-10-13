@@ -15,6 +15,7 @@ class EmailNotifierTest extends TestCase
         Config::shouldReceive('get')->once()->with('notifier::views_folder')->andReturn('viewsFolder');
         Config::shouldReceive('get')->once()->with('notifier::email.from_email')->andReturn('fromEmail');
         Config::shouldReceive('get')->once()->with('notifier::email.cc_email')->andReturn('ccEmail');
+        Config::shouldReceive('get')->once()->with('notifier::email.bcc_email')->andReturn('bccEmail');
         Config::shouldReceive('get')->once()->with('notifier::email.getter_email')->andReturn(function($user){
             return 'getterEmail';
         });
@@ -33,6 +34,7 @@ class EmailNotifierTest extends TestCase
         Config::shouldReceive('get')->once()->with('notifier::views_folder')->andReturn('viewsFolder');
         Config::shouldReceive('get')->once()->with('notifier::email.from_email')->andReturn('fromEmail');
         Config::shouldReceive('get')->once()->with('notifier::email.cc_email')->andReturn('ccEmail');
+        Config::shouldReceive('get')->once()->with('notifier::email.bcc_email')->andReturn('bccEmail');
         Config::shouldReceive('get')->once()->with('notifier::email.getter_email')->andReturn(function($user){
             return 'getterEmail';
         });
@@ -45,7 +47,8 @@ class EmailNotifierTest extends TestCase
             'name' => 'userName',
             'subject' => null,
             'from_email' => 'fromEmail',
-            'cc_email' => 'ccEmail'
+            'cc_email' => 'ccEmail',
+            'bcc_email' => 'bccEmail'
         );
 
         $email->shouldReceive('sendNotification')->once()->with($destination, 'viewsFolder.email.fooView', array('foo' => 'bar', 'user' => 'fooUser'));
